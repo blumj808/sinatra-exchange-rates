@@ -3,6 +3,8 @@ require "sinatra/reloader"
 require "http"
 require "json"
 # define a route
+
+
 get("/") do
 
   # build the API url, including the API key in the query string
