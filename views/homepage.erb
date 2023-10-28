@@ -8,14 +8,9 @@
 
   <body>
     <h1>Currency pairs</h1>
+    <% @symbols.keys.each do |currency|%>
+    <li><a href="<%=currency %>>
 
-<ul>
-  <% @symbols.fetch("currencies").each do |key, value| %>
-    <li>
-       <a href="/<%= key %>">
-        Convert 1 <%= key %> to...
-      </a>
-    </li>
   <% end %>
 </ul>
 
