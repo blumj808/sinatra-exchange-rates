@@ -31,7 +31,7 @@ get("/:from_currency") do
   @original_currency = params.fetch("from_currency")
 
   api_url = "https://api.exchangerate.host/list?access_key=#{ENV["Exchange_Rate_Key"]}"
-  raw_data = HTTP.get(apu_url)
+  raw_data = HTTP.get(api_url)
   raw_data_string = raw_data.to_s
   parsed_data = JSON.parse(raw_data_string)
   symbols = parsed_data.fetch("currencies")
