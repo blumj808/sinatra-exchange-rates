@@ -9,7 +9,8 @@
   <body>
     <h1>Currency pairs</h1>
     <% @symbols.keys.each do |currency|%>
-    <li><a href="<%=currency %>>
+    <li><a href="<%=currency %>">
+     Convert 1 <%= currency %> to...</a></li>
 
   <% end %>
 </ul>
