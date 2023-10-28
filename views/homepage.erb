@@ -10,12 +10,13 @@
     <h1>Currency pairs</h1>
 
 <ul>
+  <% @symbols.fetch("currencies").each do |key, value| %>
     <li>
-      <a href="/<%= @symbols %>">
-        Convert 1 + <%= @symbols %> + to...
-        # the "AED" in this example should be the @symbol
+      <a href="/convert">
+        Convert 1 <%= key %> to...
       </a>
-    </li>  
+    </li>
+  <% end %>
 </ul>
 
   </body>

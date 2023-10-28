@@ -4,10 +4,12 @@ require "http"
 require "json"
 # define a route
 
-
 get("/") do
 
   # build the API url, including the API key in the query string
+
+  private_key = ENV["EXCHANGE_RATE_KEY"]
+
   api_url = "https://api.exchangerate.host/list?access_key=#{ENV["EXCHANGE_RATE_KEY"]}"
 
   # use HTTP.get to retrieve the API information
@@ -21,7 +23,13 @@ get("/") do
 
   # get the symbols from the JSON
   @symbols = parsed_data
+  
+  
+  @symbols.each do |key, value|
 
+  puts "Key: #{@key}, Value: #{@value}"
+
+  end
   # render a view template where I show the symbols
   erb(:homepage)
 end
