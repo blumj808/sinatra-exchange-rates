@@ -12,7 +12,7 @@
 <ul>
   <% @symbols.fetch("currencies").each do |key, value| %>
     <li>
-      <a href="/convert">
+       <a href="/<%= key %>">
         Convert 1 <%= key %> to...
       </a>
     </li>
