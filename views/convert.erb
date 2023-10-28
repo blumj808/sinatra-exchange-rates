@@ -1,23 +1,7 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Target: Exchange Rates</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
-
-  <body>
-    <h1>Convert  </h1>
-
-<p>Go <a href="/">back</a>.</p>
-
+  <h1>Convert <%=currency %> </h1>
+  <p>Go <a href="/">back</a>.</p>
 <ul>
-    <li>
-      <a href="/exchange"></a>
-        Convert 1 <%= @symboll %> to <%= @symboll%>...
-      </a>
-    </li>
+  <li><a href="/:from_currency/:to_currency"></a></li>
+  Convert 1 <%= @original_currency %> to <%= @destination_currency %>...</a></li>
+<% end %>
 </ul>
-
-  </body>
-</html>
