@@ -1,17 +1,5 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <title>Target: Exchange Rates</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-  </head>
+<h1>Convert <%= @original_currency %> to <%= @destination_currency %> </h1>
 
-  <body>
-    <h1>Convert + <%= @key %> + to + <%= @key%> </h1>
+<p>1 <%= @original_currency %> equals <%= @exchange_rate %> <%= @destination_currency %>.</p>
 
-<p>1 <%= @key %> equals 1 <%= @key %></p>
-
-<p>Go <a href="/">back</a>.</p>
-
-  </body>
-</html>
+<p>Go <a href="/<%= @original_currency %>">back</a>.</p>

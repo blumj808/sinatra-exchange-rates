@@ -50,7 +50,7 @@ get("/:from_currency/:to_currency") do
   raw_data_sting = raw_data.to_s
   parsed_data = JSON.parse(raw_data_string)
   @exchange_rate = parsed_data.fetch("result")
-  erb(:currency_exchange)
+  erb(:exchange)
   
   # some more code to parse the URL and render a view template
 end
